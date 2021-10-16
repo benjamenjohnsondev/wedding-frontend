@@ -1,0 +1,49 @@
+@import 'bootstrap';
+@import '/styles/variables.scss';
+@import '/styles/fonts.scss';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: $font-light;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.container {
+  max-width: 1455px;
+  margin: 1.5rem auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+a:hover {
+  color: $primary;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.fontLight {
+  color: $font-light;
+}
+
+.centered {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.medium {
+  font-weight: 500;
+}

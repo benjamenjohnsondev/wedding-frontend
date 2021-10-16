@@ -1,0 +1,98 @@
+@import '/styles/variables.scss';
+.sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem auto;
+    margin-bottom: calc(5rem + 0.5vw);
+
+    h4 {
+        color: $font-light;
+    }
+
+    @media screen and (min-width: 900px) {
+        padding: 2rem;
+    }
+}
+
+.lineBreak {
+    min-height: 5rem;
+}
+
+.hotelsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3rem 0;
+
+    .hotelWrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto;
+
+        .image {
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                max-width: 100vw;
+                height: 100%;
+                background-color: $secondary;
+                top: -8%;
+                left: -2rem;
+                z-index: -1;
+            }
+
+            &.middle {
+                &:after {
+                    top: 13%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 90%;
+                    width: 111%;
+                }
+            }
+
+            &.right {
+                &:after {
+                    left: auto;
+                    right: -1rem;
+                    @media screen and (min-width: 900px) {
+                        right: -2rem;
+                    }
+                }
+            }
+
+        }
+
+        a {
+            color: $primary;
+            font-weight: 500;
+            position: relative;
+            text-decoration: none;
+        }
+    }
+}
+
+.image {
+    img {
+        border-radius: 5px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .hotelsWrapper {
+        flex-direction: row;
+
+        .hotelWrapper {
+            margin: 2rem 1rem;
+    
+            &.middle {
+                margin-top: 10rem;
+            }
+        }
+    }
+}

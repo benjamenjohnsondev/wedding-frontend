@@ -1,0 +1,197 @@
+@import '/styles/variables.scss';
+.sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary;
+    padding: 2rem 1rem;
+
+    @media screen and (min-width: 900px) {
+        padding: 2rem;
+    }
+}
+
+.card {
+    margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+
+    @media screen and (min-width: 1064px) {
+        width: 44.5%;
+        position: relative;
+
+        &.ceremony {
+            width: 62%;
+        }
+    }
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+
+    img {
+        border-radius: 5px 5px 0 0;
+    }
+    @media screen and (min-width: 900px) {
+        border-radius: 5px;
+        width: 50%;
+        img {
+            border-radius: 5px;
+        }
+    }
+}
+
+.ceremony {
+    @media screen and (min-width: 900px) {
+
+        display: flex;
+        justify-content: flex-end;
+
+        .contentWrapper {
+            left: 0;
+            right: auto;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.reception {
+    order: 2;
+    position: relative;
+    text-align: right;
+}
+
+.parking {
+    order: 3;
+    margin-bottom: .5rem;
+    width: 100%;
+
+    h4 {
+        margin-bottom: 0;
+        text-align: left;
+    }
+}
+
+.contentWrapper {
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    padding: 2rem;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: 0;
+        border: 5px solid $primary;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 0;
+        right: 0;
+        border: 5px solid $primary;
+        border-top-color: transparent;
+        border-left-color: transparent;
+    }
+
+    @media screen and (min-width: 900px) {
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        right: calc(-39% + 2rem);
+        left: auto;
+        width: 70%;
+        transform: translate(-50%, -50%);
+    }
+
+    &.left {
+        
+    }
+}
+
+@media screen and (min-width: 1064px) {
+    .sectionWrapper {
+        h4 {
+            font-size: calc(1.2rem + 0.1vw)
+        }
+    }
+}
+
+@media screen and (min-width: 1064px) {
+    .sectionWrapper {
+        background-color: transparent;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            width: 66%;
+            height: 66%;
+            background:$secondary;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        &:after {
+            background:$secondary-light;
+            height: 13rem;
+            top: auto;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            width: 100%;
+        }
+    }
+    .cardWrapper {
+        display: flex;
+
+        .card {
+            display: flex;
+            &.ceremony {
+                padding-right: 1rem;
+            }
+            &.reception {
+                padding-left: 1rem;
+                .contentWrapper {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .imageWrapper {
+                width: 100%;
+            }
+            .contentWrapper {
+                transform: none;
+                bottom: 3rem;
+                top: auto;
+                right: 3rem;
+                left: auto;
+                
+                
+                &:before,
+                &:after {
+                    border-color: $secondary;
+                }
+                &:before {
+                    border-bottom-color: transparent;
+                    border-right-color: transparent;
+                }
+                &:after {
+                    border-top-color: transparent;
+                    border-left-color: transparent;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import '/styles/variables.scss';
+.login {
+  background-color: $secondary-light;
+  padding: 5rem 2rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-top: -1.5rem;
+  min-height: calc(100vh - 6.5rem);
+
+
+  @media screen and (min-width: 900px) {
+    min-height: calc(100vh - 2.5rem);
+    margin-bottom: -1.5rem;
+    padding: 5rem 2rem;
+    width: 33%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+}
+.contentLeftWrapper {
+  margin-top: 1.5rem;
+  order: 2;
+  @media screen and (min-width: 900px) {
+    order: -1;
+  }
+}
+
+.loginWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  @media screen and (min-width: 900px) {
+    margin: 1.5rem auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 1468px) {
+    justify-content: space-between;
+  }
+  .contentLeftWrapper {
+    display: none;
+    @media screen and (min-width: 900px) {
+      align-self: center;
+      display: block;
+    }
+  }
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.lineBreakWrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 3rem;
+
+  margin: 2rem 0;
+  
+  .lineBreak {
+    background-color: $primary-dark;
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.loginFormWrapper {
+  background-color: white;
+  box-shadow: 4px 4px 10px 0px lighten($primary-dark, 15);
+  padding: 3rem 2rem 1.25rem;
+  margin-bottom: 5rem;
+
+  h3 {
+    margin-bottom: 2.5rem;
+  }
+}

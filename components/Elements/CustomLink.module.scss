@@ -1,0 +1,59 @@
+@import '/styles/variables.scss';
+.primaryButton {
+    appearance: auto;
+    border: none;
+    border-color: $primary;
+    border-radius: 20px 0 20px 0;
+    background-color: $primary;
+    color: #fff;
+    padding: 0.5rem calc(1rem + 2vw);
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    align-self: center;
+    min-width: 200px;
+
+    @media screen and (min-width: 900px) {
+        width: auto;
+    }
+
+    &:focus,
+    &:hover,
+    &:active
+    &:disabled {
+        &:active {
+            box-shadow: 0 0 0 0.25rem rgb(94 89 55 / 50%);
+            border-color: $primary-dark;
+        }
+        background-color: $primary-dark;
+        border-color: $primary-dark;
+        box-shadow: 0 0 0 0.25rem rgba($primary-darker, 50%)
+    }
+
+    &.loading {
+        background: $primary;
+        border-color: $primary;
+    }
+
+    svg {
+        display: none;
+        margin-left: .5rem;
+        animation: spin 2s linear infinite;
+    }
+
+    &.loading {
+        svg {
+            display: inline-block;
+        }
+    }
+}
+
+@keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}

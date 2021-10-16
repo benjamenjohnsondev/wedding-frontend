@@ -1,0 +1,63 @@
+@import '/styles/variables.scss';
+
+.rsvpWrapper {
+    // Font height serves as margin bottom after transform
+    margin-bottom: 0;
+
+    h1 {
+        background-color: white;
+        display: inline-block;
+        padding: 1rem;
+        position: relative;
+        left: .5rem;
+        width: auto;
+        z-index: 2;
+    }
+}
+
+.rsvpWrapperInner {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $primary;
+    border-radius: 5px;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    position: relative;
+    top: calc(-2.6rem - 1.3vw);
+    z-index: 1;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .field {
+            margin: .5rem;
+            width: 33%;
+            &:first-of-type {
+                margin-left: 0;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.jukebox {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 $input-outline;
+    margin-top: 3rem;
+    padding: 1rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    margin: .5rem 0;
+}
+
+.saveButton {
+    align-self: flex-end;
+    margin-top: 3rem;
+}

@@ -1,0 +1,42 @@
+@import '/styles//variables.scss';
+.form,
+.label {
+    display: flex;
+    flex-flow: column;
+    > span {
+        font-weight: 600;
+    }
+}
+
+.error {
+    color: $warning;
+    margin: 1rem 0 0;
+}
+
+.success {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    transition: .3s ease;
+    z-index: 2;
+
+    &.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &.hide {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    .inner {
+        background-color: $succeess;
+        border-radius: 20px 0 20px 0;
+        font-weight: 400;
+        color: white;
+        padding: 0.5rem calc(1rem + 2vw);
+    }
+}

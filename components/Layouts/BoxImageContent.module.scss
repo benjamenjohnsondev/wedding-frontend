@@ -1,0 +1,166 @@
+@import '/styles/variables.scss';
+
+.boxWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (min-width: 900px) {
+        padding-right: 1rem;
+    }
+}
+
+.leftContent {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 100%;
+
+    @media screen and (min-width: 900px) {
+        margin-left: -1rem;
+    }
+}
+
+.block {
+    background-color: $secondary;
+    display: block;
+    width: 1px;
+    height: 1px;
+    top: 0;
+    z-index: 1;
+
+    &.blockLeft {
+        min-width: calc(220px + 2rem);
+        width: 75%;
+        height: 30%;
+        margin-top: -1px;
+        padding: 3rem 1rem 1.5rem;
+        position: relative;
+
+        @media screen and (min-width: 900px) {
+            padding: 0;
+            width: 50%;
+            height: 50%;
+            border-right: white 10rem solid;
+            position: absolute;
+        }
+    }
+    &.blockRight {
+        background-color: $secondary-light;
+        position: absolute;
+        width: 20%;
+        height: 80%;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        @media screen and (min-width: 900px) {
+            right: -2rem;
+        }
+    }
+}
+
+.arrowLink {
+    color: $font-lighter;
+    font-weight: 400;
+    font-size: .8rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 3;
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    transform: translateY(-50%);
+
+    @media screen and (min-width: 900px) {
+        top: auto;
+        bottom: 66%;
+        left: -1%;
+        transform: rotate(-90deg) translate(0, -50%);
+        white-space: nowrap;
+    }
+    @media screen and (min-width: 1224px) {
+        left: 3%;
+    }
+
+    .arrow {
+        position: absolute;
+        background-color: $secondary;
+        background-clip: content-box;
+        top: calc(1.5rem - 20px);
+        left: calc(100% + 1.5rem);
+        height: 17px;
+        width: 2px;
+
+        @media screen and (min-width: 900px) {
+            border: 3px solid white;
+            order: 2;
+            width: 160%;
+            height: 8px;
+            top: 50%;
+            transform: translate(-100%, -50%);
+            left: -50%;
+        }
+        
+        &::before {
+            content: '';
+            border: 1px solid $secondary;
+            width: 1px;
+            height: 8px;
+            display: block;
+            top: 12px;
+            left: 2px;
+            position: absolute;
+            transform: rotate(45deg);
+            @media screen and (min-width: 900px) {
+                height: 12px;
+                display: block;
+                left: 2px;
+                top: -9px;
+            }
+        }
+        &::after {
+            content: '';
+            border: 1px solid $secondary;
+            width: 1px;
+            height: 8px;
+            display: block;
+            top: 12px;
+            right: 2px;
+            position: absolute;
+            transform: rotate(-45deg);
+            @media screen and (min-width: 900px) {
+                height: 12px;
+                display: block;
+                left: 2px;
+                top: -1px;
+            }
+        }
+    }
+}
+
+.imageWrapper {
+    position: relative;
+    align-self: flex-end;
+    z-index: 2;
+    .detailsImg {
+        border-radius: 5px;
+        display: flex;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        margin-top: -1rem;
+        max-width: 90%;
+        overflow: hidden;
+
+        @media screen and (min-width: 900px) {
+            margin-left: auto;
+            margin-top: 4rem;
+            max-width: 82%;
+        }
+    }
+}
+
+
+.contentWrapper {
+    text-align: center;
+}

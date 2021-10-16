@@ -1,0 +1,23 @@
+@import '/styles/variables.scss';
+
+.footer {
+    color: white;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    padding: 1rem;
+    margin-bottom: 0;
+    width: 100%;
+    .footerInner {
+        margin: 0 auto;
+        width: auto;
+        @media screen and (min-width: 900px) {
+            width: 100%;
+        }
+    }
+    .separator {
+        margin: 0 1rem;
+    }
+}

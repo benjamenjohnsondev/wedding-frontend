@@ -1,0 +1,63 @@
+@import '/styles//variables.scss';
+
+.select {
+    border-color: $input-outline;
+    outline-color: $input-outline;
+
+    &:focus,
+    &:active {
+        box-shadow: 0 0 0 0.25rem $secondary;
+
+        ~.chevron svg {
+          transform: rotate(180deg);
+        }
+    }
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+
+  svg {
+    transition: .3s ease;
+    transform: rotate(-0deg);
+  }
+}
+
+.inputWrapper {
+    position: relative;
+    color: $font-light;
+    font-weight: 100;
+    
+    &:focus-within label {
+      transform: translate(0, .5rem) scale(0.8);
+    }
+  }
+  
+  .formLabel {
+    position: absolute;
+    pointer-events: none;
+    transform: translate(0, 1.25rem) scale(1);
+    transform-origin: top left;
+    transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    font-size: 16px;
+    line-height: 1;
+    left: .75rem;
+    top: 0;
+  
+    &.filled {
+      transform: translate(0, .5rem) scale(0.8);
+    }
+  }
+  
+  .formControl {
+    border-color: $input-outline;
+    font-weight: 100;
+    padding: 1.25rem .75rem .375rem 0.75rem;
+    &:focus {
+      border-color: rgba($primary, 25%);
+      box-shadow: 0 0 0 0.25rem rgba($primary, 25%)
+    }
+  }

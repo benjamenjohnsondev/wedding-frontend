@@ -1,0 +1,63 @@
+@import '/styles/variables.scss';
+
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.imageWrapper {
+    display: none;
+}
+
+.formWrapper {
+    margin-bottom: 5rem;
+    order: -1;
+}
+
+@media screen and (min-width: 1300px) {
+    .pageWrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .formWrapper {
+        order: 1;
+        padding-left: 2rem;
+    }
+
+    .imageWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5rem;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            background-color: $secondary;
+            width: 70%;
+            height: 70%;
+            top: -1.5rem;
+            left: -1.5rem;
+            z-index: -1;
+            position: absolute;
+        }
+
+        &:after {
+            content: '';
+            background-color: $secondary;
+            width: 70%;
+            height: 70%;
+            top: auto;
+            left: auto;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            z-index: -1;
+            position: absolute;
+        }
+    }
+}

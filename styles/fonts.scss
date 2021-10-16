@@ -1,0 +1,52 @@
+@import '/styles/variables.scss';
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+  color: $font-dark;
+  font-family: 'Noto Serif Display', serif;
+  letter-spacing: -1px;
+  margin-top: .25em;
+  margin-bottom: .5em;
+  text-align: center;
+
+  span {
+    font-weight: 100;
+  }
+}
+
+h1,
+.h1 {
+  font-size: calc(1.6rem + 1.3vw);
+}
+
+h2,
+.h2 {
+  font-size: calc(1.5rem + 1.2vw);
+}
+
+h3,
+.h3 {
+  font-size: calc(1.4rem + .7vw);
+}
+
+h4, 
+.h4 {
+  color: $font-light;
+  font-size: calc(1.3rem + .3vw);
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: normal;
+}
+
+h5, 
+.h5 {
+  color: $font-light;
+  font-size: calc(1.2rem + .1vw);
+  font-family: 'Noto Serif Display', serif;
+  letter-spacing: -1px;
+}

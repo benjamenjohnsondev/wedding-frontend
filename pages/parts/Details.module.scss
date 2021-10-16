@@ -1,0 +1,44 @@
+@import '/styles/variables.scss';
+
+.sectionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (min-width: 900px) {
+        border-top: 1px solid $secondary;
+        align-items: unset;
+        flex-direction: row;
+        margin-top: 0;
+        margin-bottom: calc(5rem + 0.5vw);
+        padding: 2rem;
+        padding-left: 1rem;
+        padding-top: 0;
+    }
+}
+
+.contentWrapper {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    @media screen and (min-width: 900px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+}
+
+.button {
+    border-color: $primary;
+    border-radius: 20px 0 20px 0;
+    background-color: $primary;
+    padding: 0.5rem 4rem;
+    width: 100%;
+
+    @media screen and (min-width: 900px) {
+        width: auto;
+    }
+}
+

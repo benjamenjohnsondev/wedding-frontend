@@ -1,0 +1,19 @@
+@import '/styles/variables.scss';
+
+.lineBreakWrapper {
+    display: block;
+    position: relative;
+    height: 15%;
+    width: 100%;
+    min-height: 3rem;
+    margin: 2rem 0;
+    
+    .lineBreak {
+        background-color: $primary;
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
