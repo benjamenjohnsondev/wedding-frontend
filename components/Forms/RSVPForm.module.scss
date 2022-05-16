@@ -1,5 +1,11 @@
 @import '/styles/variables.scss';
 
+.rsvpWrapperOuter {
+    @media screen and (min-width: 768px) {
+        padding-left: 2rem;
+    }
+}
+
 .rsvpWrapper {
     // Font height serves as margin bottom after transform
     margin-bottom: 0;
@@ -44,13 +50,24 @@
     }
 }
 
-.jukebox {
+.jukebox,
+.menuOptions {
     border-radius: 5px;
     box-shadow: 0 2px 5px 0 $input-outline;
-    margin-top: 3rem;
-    padding: 1rem 1rem 3rem;
+    margin: 3rem 0;
+    padding: 2rem 1rem 3rem;
     display: flex;
     flex-direction: column;
+}
+
+.menuOptions {
+    margin-top: -1rem;
+}
+
+.vege {
+    color: #00a1e4;
+    font-family: 'Noto Serif Display', serif;
+    font-size: 1.1em;
 }
 
 .field {
@@ -59,5 +76,34 @@
 
 .saveButton {
     align-self: flex-end;
-    margin-top: 3rem;
+    pointer-events: all;
+    transition: .3s ease;
+    z-index: 999;
+}
+
+.saveContentWrapper {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    left: 50%;
+    bottom: .5rem;
+    max-width: 1455px;
+    padding: 0 2rem;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+    transform: translate(-50%, 1rem);
+    z-index: 3;
+
+    @media screen and (min-width: 768px) {
+        bottom: 3rem;
+    }
+
+    &.isSticky {
+        position: fixed;
+        opacity: 1;
+        transform: translate(-50%, 0);
+        pointer-events: none;
+    }
 }

@@ -13,6 +13,8 @@ const PlacesToStay = (props) => {
             <h2>Places To Stay</h2>
             <p>Here's a few places close by to stay, there's also 
                 <br/>plenty of places on <a target='_blank' rel='noopener' href='https://www.airbnb.co.uk/s/Morecambe/homes?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&flexible_trip_dates%5B%5D=april&flexible_trip_dates%5B%5D=may&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=calendar&query=Morecambe&place_id=ChIJwQFvLTFge0gRL6HHRBpaKq0&checkin=2022-08-12&checkout=2022-08-14&source=structured_search_input_header&search_type=autocomplete_click'>Airbnb</a></p>
+            <p>If you're planning on staying with us at the Midland Hotel
+                <br/>please call direct and let them know you're with our wedding party</p>
             <div className={styles.hotelsWrapper}>
                 <div className={`${styles.hotelWrapper} ${styles.left}`}>
                     <div className={`${styles.image} ${styles.left}`}>

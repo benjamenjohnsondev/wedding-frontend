@@ -23,7 +23,7 @@ class MealOptions extends Component {
 
     handleOptionChange(i, event) {
         let value = [...this.state.guests];
-        value[i][event.target.name] = parseInt(event.target.value);
+        value[i][event.target.name] = event.target.value;
         this.setState({ guests: value });
     }
 
@@ -101,22 +101,29 @@ class MealOptions extends Component {
         )
     }
 
+    getGuestText(){
+        return this.state.guests.length > 0 ? '\+ Add another guest' : '+ Add a guest';
+    }
+
     render() {
         return (
-            <div className={styles.mealOptionsWrapper}>
-                <h2 className='h3 textLeft'>{this.props.label}</h2>
-                <div className={styles.guestsWrapperOuter}>
-                    {this.createUI()}
+            <>
+                <div className={styles.mealOptionsWrapper}>
+                    <h2 className='h3 textLeft'>{this.props.label}</h2>
+                    <div className={styles.guestsWrapperOuter}>
+                        {this.createUI()}
+                    </div>
+                    <CustomButton type='button'
+                        onClick={this.addClick.bind(this)} 
+                        value={this.getGuestText()}
+                        content={this.getGuestText()}
+                        className={styles.addGuestButton}
+                    >
+                            {this.getGuestText()}
+                    </CustomButton>
                 </div>
-                <CustomButton type='button'
-                    onClick={this.addClick.bind(this)} 
-                    value='+ Add another guest' 
-                    content='+ Add another guest' 
-                    className={styles.addGuestButton}
-                >
-                        + Add another guest
-                </CustomButton>
-            </div>
+                {this.props.children}
+            </>
         );
     }
 }
