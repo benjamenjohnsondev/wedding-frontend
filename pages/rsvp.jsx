@@ -9,6 +9,7 @@ import Loading from '../components/Loading'
 import styles from './rsvp.module.scss'
 import WillamsonPark from '../public/Williamson_Park_2.jpg'
 import Image from 'next/image'
+import RSVPFormClosed from '../components/Forms/RSVPFormClosed'
 
 const SgProfile = () => {
   const { user } = useUser({ redirectTo: '/' });
@@ -72,7 +73,7 @@ const SgProfile = () => {
         </div>
         <div className={styles.formWrapper}>
           <Form errorMessages={errorMsg} successMessage={successMsg} onSubmit={handleSubmit} >
-            <RSVPForm loading={saving}/>
+            <RSVPFormClosed loading={saving}/>
           </Form>
         </div>
       </div>
