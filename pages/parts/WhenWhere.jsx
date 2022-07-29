@@ -53,7 +53,7 @@ const WhenWhere = (props) => {
             </div>
 
             <div className={`${styles.card} ${styles.parking}`}>
-                <h4>Parking: <span>Both venues have on site parking available.</span></h4>
+                <h4>Parking: <span>Both venues have on site parking available. Please access Williamson's Park via Quernmore Road for reserved parking.</span></h4>
             </div>
         </div>
     );
